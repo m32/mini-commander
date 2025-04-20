@@ -35,3 +35,11 @@ Usage:
     # Result of compilation is standalone 'mc' binary, it does not need anything else.
     # There is no make install because 'mc' would interfere with midnight commander.
     # So install it manually, for example copy ./mc to your path if you like
+
+Compilation for android:
+    ./ncurses-git-clone
+    ./ncurses-make-static
+    make
+
+Installation on android:
+    make install
