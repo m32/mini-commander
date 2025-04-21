@@ -47,20 +47,20 @@ int format_number(off_t num, char *str) {
 
 
 void format_size_with_units(off_t size, char *size_str, size_t len, int maxlen) {
-    snprintf(size_str, len, "%lld", size);
+    snprintf(size_str, len, "%ld", size);
 
     if (strlen(size_str) > maxlen) {
         size /= 1024;
-        snprintf(size_str, len, "%lldK", size);
+        snprintf(size_str, len, "%ldK", size);
         if (strlen(size_str) > maxlen) {
             size /= 1024;
-            snprintf(size_str, len, "%lldM", size);
+            snprintf(size_str, len, "%ldM", size);
             if (strlen(size_str) > maxlen) {
                 size /= 1024;
-                snprintf(size_str, len, "%lldG", size);
+                snprintf(size_str, len, "%ldG", size);
                 if (strlen(size_str) > maxlen) {
                     size /= 1024;
-                    snprintf(size_str, len, "%lldT", size);
+                    snprintf(size_str, len, "%ldT", size);
                 }
             }
         }

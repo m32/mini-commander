@@ -316,8 +316,8 @@ int view_edit_file(char *filename, int editor_mode) {
             mvwprintw(toprow_win, 0, 0, "%s   [-%s--] %3d L:[%3d+%3d %3d/%3lld] *(%4d/%lldb)   %s     ", filename, is_modified ? "M" : "-", absolute_cursor_col, screen_start_line + 1, cursor_row, absolute_cursor_row + 1, num_lines, seek + absolute_cursor_col, num_bytes, charcode);
         } else {
             mvwprintw(toprow_win, 0, 0, "%s", filename);
-            int num_width = snprintf(NULL, 0, "        %d/%lld   %lld%%", shown_line_max, num_lines, num_lines > 0 ? 100 * shown_line_max / num_lines : 100);
-            mvwprintw(toprow_win, 0, max_x - num_width, "        %d/%lld   %lld%%", shown_line_max, num_lines, num_lines > 0 ? 100 * shown_line_max / num_lines : 100);
+            int num_width = snprintf(NULL, 0, "        %d/%ld   %ld%%", shown_line_max, num_lines, num_lines > 0 ? 100 * shown_line_max / num_lines : 100);
+            mvwprintw(toprow_win, 0, max_x - num_width, "        %d/%ld   %ld%%", shown_line_max, num_lines, num_lines > 0 ? 100 * shown_line_max / num_lines : 100);
         }
 
         wrefresh(toprow_win);
