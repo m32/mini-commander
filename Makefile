@@ -12,10 +12,7 @@ mc: *.c *.h
 clean:
 	rm -f mc
 
-install: mc xterm-256color
+install: mc ncurses/lib/terminfo/x/xterm-256color
 	adb push android-nc mc /data/local/tmp
 	adb shell mkdir /data/local/tmp/x
-	adb push xterm-256color /data/local/tmp/x
-
-xterm-256color: ncurses/lib/terminfo/x/xterm-256color
-	cp $< $@
+	adb push ncurses/lib/terminfo/x/xterm-256color /data/local/tmp/x
