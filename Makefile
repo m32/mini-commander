@@ -13,7 +13,7 @@ clean:
 	rm -f mc
 
 install: mc xterm-256color
-	adb push xnc mc /data/local/tmp
+	adb push android-nc mc /data/local/tmp
 	adb shell mkdir /data/local/tmp/x
 	adb push xterm-256color /data/local/tmp/x
 
