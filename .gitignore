@@ -1,2 +1,5 @@
 ncurses/
-mc
+mcpc.c
+mcpc
+mcrpi
+mcand
