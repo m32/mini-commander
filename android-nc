@@ -1,1 +1,1 @@
-TERMINFO=/data/local/tmp $1 ./mc
+TERMINFO=/data/local/tmp/terminfo $1 /data/local/tmp/mc

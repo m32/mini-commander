@@ -1,0 +1,5 @@
+#!/bin/bash
+adb push android-nc /data/local/tmp/xnc
+adb push mc /data/local/tmp/
+adb shell mkdir -p /data/local/tmp/terminfo/x
+adb push ncurses/lib/terminfo/x/xterm-256color /data/local/tmp/terminfo/x/
