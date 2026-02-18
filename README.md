@@ -1,11 +1,12 @@
 # mini-commander
 Mini Commander is very simplified clone of Midnight Commander for Linux.
+It even includes viewer and editor.
 
 I would like to call myself an author, but that's not so easy.
 
 The majority of the code, including this text itself, was written by
-ChatGPT. The chatbot is not very smart and often makes weird mistakes. It
-especially has trouble understanding large amounts of code.
+ChatGPT 4. The chatbot is not very smart and often makes weird mistakes.
+It especially has trouble understanding large amounts of code.
 
 Even with these issues, ChatGPT is still pretty helpful for easy tasks.
 If you give it simple instructions one at a time, it can create useful
@@ -14,9 +15,10 @@ mistakes.
 
 So, even though ChatGPT has some problems, especially with big,
 complicated tasks, it can be a big help with smaller, simpler tasks as
-long as you double-check the work it does.
+long as you double-check the work it does. I am sure it will be better
+in future.
 
-ChatGPT don't generate code with an explicit license attached to it. The
+ChatGPT doesn't generate code with an explicit license attached to it. The
 code it provides in responses is intended for educational and informational
 purposes, and users are free to use it as they see fit. So, the license
 of Mini Commander is GNU GPL v3.
