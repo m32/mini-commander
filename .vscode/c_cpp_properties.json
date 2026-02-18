@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceRoot}",
                 "${workspaceRoot}/ncurses/include",
-                "/devel/bin/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+                //"/devel/bin/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
                 "/usr/include",
                 "."
             ],
@@ -18,7 +18,7 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "",
                 "path": [
-                    "/devel/bin/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+                    //"/devel/bin/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
                     "/usr/include"
                 ]
             },

@@ -435,14 +435,27 @@ int main(int argc, char *argv[]) {
 
             if (cmd_len > 0) {
                 if (strcmp(cmd, "exit") == 0) exit(0);
-
-                endwin();  // End ncurses mode
-                printf("%s@%s:%s# %s\n", username, unameData.nodename, active_panel->path, cmd);
-                system(cmd);  // Execute the command
-                init_screen();
-                memset(cmd, 0, CMD_MAX);
-                cmd_len = cursor_pos = cmd_offset = prompt_length = 0;
-                update_files_in_both_panels();
+                if (strncmp (cmd, "cd", 2) == 0 && (cmd[2] == '\0' || isspace(cmd[2]))) {
+                    char *new_path = cmd + 2;
+                    while (isspace(*new_path)) new_path++;
+                    if (chdir(new_path) == 0) {
+                        getcwd(active_panel->path, sizeof(active_panel->path));
+                        update_files_in_both_panels();
+                    } else {
+                        show_errormsg(SPRINTF("Failed to change directory\n%s", strerror(errno)));
+                    }
+                    memset(cmd, 0, CMD_MAX);
+                    cmd_len = cursor_pos = cmd_offset = prompt_length = 0;
+                } else {
+                    endwin();  // End ncurses mode
+                    printf("%s@%s:%s# %s\n", username, unameData.nodename, active_panel->path, cmd);
+                    system(cmd);  // Execute the command
+                    init_screen();
+                    memset(cmd, 0, CMD_MAX);
+                    cmd_len = cursor_pos = cmd_offset = prompt_length = 0;
+                    getcwd(active_panel->path, sizeof(active_panel->path));
+                    update_files_in_both_panels();
+                }
             }
         }
 

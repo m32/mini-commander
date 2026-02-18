@@ -5,7 +5,7 @@
             "name": "nc",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}",
+            "program": "${workspaceFolder}/mc",
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "externalConsole": true,
